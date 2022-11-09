@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MPHGitRepo.iml" filepath="$PROJECT_DIR$/.idea/modules/MPHGitRepo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MPHGitRepo_main.iml" filepath="$PROJECT_DIR$/.idea/modules/MPHGitRepo_main.iml" group="MPHGitRepo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MPHGitRepo_test.iml" filepath="$PROJECT_DIR$/.idea/modules/MPHGitRepo_test.iml" group="MPHGitRepo" />
+      <module fileurl="file://$PROJECT_DIR$/testapp/testapp.iml" filepath="$PROJECT_DIR$/testapp/testapp.iml" />
+    </modules>
+  </component>
+</project>

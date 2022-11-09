@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sas-app>
+    <name>1</name>
+    <version>1.0.0.0</version>
+    <priority>1</priority>
+    <sbb />
+    <enable-annotation>false</enable-annotation>
+    <enable-lib-annotation>true</enable-lib-annotation>
+    <!--   Listener for timertask -->
+    <listener>
+        <listener-class>com.agnity.service.mphTestApp.MphTestAppSipServlet</listener-class>
+    </listener>
+    <replication-config>
+        <replication-policy>
+            <event>TIMER_CREATION</event>
+            <replication-type>REPLICATE</replication-type>
+        </replication-policy>
+        <replication-policy>
+            <event>TIMER_EXPIRY</event>
+            <replication-type>REPLICATE</replication-type>
+        </replication-policy>
+    </replication-config>
+</sas-app>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>MPH_PROJECT</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>source</name>
+			<type>2</type>
+			<location>C:/Users/reeta/GitLab/MPHGitRepo_nb/src</location>
+		</link>
+		<link>
+			<name>src</name>
+			<type>2</type>
+			<location>C:/Users/reeta/GitLab/MPHGitRepo_rogers/src</location>
+		</link>
+	</linkedResources>
+</projectDescription>

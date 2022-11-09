@@ -1,0 +1,105 @@
+/*******************************************************************************
+ *   Copyright (c) 2016 Agnity, Inc. All rights reserved.
+ *
+ *   This is proprietary source code of Agnity, Inc.
+ *
+ *   Agnity, Inc. retains all intellectual property rights associated
+ *   with this source code. Use is subject to license terms.
+ *
+ *   This source code contains trade secrets owned by Agnity, Inc.
+ *   Confidentiality of this computer program must be maintained at
+ *   all times, unless explicitly authorized by Agnity, Inc.
+ *******************************************************************************/
+
+apply plugin: 'java'
+/***apply plugin: 'checkstyle' **/
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+task checkstyle(type: Checkstyle) {
+    source 'src'
+    exclude '**/*.java'
+    classpath = files()
+}
+
+dependencies {
+    compile fileTree(dir: 'libs/bpjars', include: '*.jar')
+    compile fileTree(dir: 'libs/dsjars', include: '*.jar')
+    compile fileTree(dir: 'libs/httpjars', include: '*.jar')
+    compile fileTree(dir: 'libs/otherjars', include: '*.jar')
+    compile fileTree(dir: 'libs/rajars', include: '*.jar')
+}
+
+jar {
+    manifest { attributes 'Implementation-Title': 'Aconyx MPH Library', 'Implementation-Version': version }
+    archiveName jarFileName
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+        resources{
+            srcDir '.'
+            include 'rebel-remote.xml'
+        }
+    }
+
+}
+
+task MPHMinimalTar(type: Tar, dependsOn: build) {
+    archiveName = intermediateTarFileName
+    from(jar) {
+       into 'bpjars'
+  }
+}
+
+//This needs to be run in execution phase since we need to find the checksum.
+MPHMinimalTar.doLast {
+    def fileSize = new File(libsDir.toString() + File.separator + jarFileName).length().toString()
+
+    def prop = new Properties()
+    def propFile = new File(libsDir.toString() + File.separator + versionDatFileName);
+    propFile.createNewFile();
+    prop.setProperty("VERSION", version)
+    prop.setProperty("FILESIZE", fileSize)
+    prop.store(propFile.newWriter(), null);
+}
+
+task MPHDistribute(type: Tar) {
+    baseName = 'MPH'
+    classifier = getDate()
+    compression = Compression.GZIP
+    from(patchScriptsFolder + File.separator + 'applyMphPatch.sh') {
+        into '.'
+    }
+    from(patchScriptsFolder + File.separator + 'rollbackMphPatch.sh') {
+        into '.'
+    }
+    from(MPHMinimalTar) {
+        into '.'
+    }
+   
+    from(configFolder + File.separator + propFileName) {
+        into '.'
+    }  
+    from(libsDir.toString() + File.separator + versionDatFileName) {
+        into '.'
+    }
+}
+
+task CreatePatch(type: Delete, dependsOn: MPHDistribute) {
+    delete distsDir.toString() + File.separator + intermediateTarFileName
+}
+
+def getDate() {
+    def date = new Date()
+    def formattedDate = date.format('ddMMyy')
+    return formattedDate
+}

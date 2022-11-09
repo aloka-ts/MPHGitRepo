@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+
+	<!-- ==================================================== -->
+
+	<!-- Build file: CAS MphTest Application -->
+
+	<!-- ==================================================== -->
+
+<project name="MphTestApp" default="all" basedir="." xmlns:sonar="antlib:org.sonar.ant">
+
+	<!-- ***************************************** -->
+
+	<!-- Main target -->
+
+	<target name="all" depends="clean,MphTestApp">
+
+	</target>
+	
+	 
+
+	<target name="clean" depends="variablesetup">
+		<delete dir="${dir.build}/MphTestApp" />
+		<delete file="${dir.build}/MphTestApp_ain_capv2_v_2.0.sar"/>
+		<delete dir="${dir.javadocs.mph}" />
+		<delete dir="${dir.javadocs.service}" />
+	</target>
+	
+		<target name="init" depends="variablesetup">		
+			<!-- Set the classpath for compiling the application -->
+
+
+				<path id="classpath">
+					
+				<fileset dir="${CASINSTALLROOT}/otherjars">
+				<include name="servlet-api.jar" />
+				<include name="sipservlet-1_1-api.jar" />
+				<include name="log4j-1.2.16.jar" />
+				<include name="activemq-all-5.3.0.jar" />
+				<include name="soap-2.3.1.jar" />
+				<include name="ojdbc6.jar" />
+				<include name="mail.jar" />
+			</fileset>
+			<fileset dir="${CASINSTALLROOT}/bpjars">
+				<include name="**/*.jar" />
+			</fileset>
+			<fileset dir="${CASINSTALLROOT}/httpjars">
+				<include name="ase-http.jar" />
+			</fileset>
+			<fileset dir="${CASINSTALLROOT}/dsjars">
+				<include name="dsua.jar" />
+			</fileset>
+			
+					<!--<fileset dir="${CLASSPATH}">
+						<include name="**/*.jar" />
+					</fileset>-->
+			</path>
+		</target>
+
+
+
+		<target name="variablesetup">
+			
+			
+			<property file="ant.properties" />
+			<property name="app.name.MphTestApp" value="MphTestApp" />
+			<property name="dir.build" Value="${INSTALLROOT}" />	
+			
+			<!-- Java Docs Related Porperties -->
+			<property name="dir.javadocs.mph"  value="${INSTALLROOT}/javadocs/mph"/>
+			<property name="dir.javadocs.service"  value="${INSTALLROOT}/javadocs/service"/>
+			<property name="mph.packages" value="com.agnity.ph.*"/>
+			<property name="service.packages" value="com.agnity.service.*"/>
+			<property name="service.name" value="MphTestApp"/>
+			<property name="ph.name" value="Multi Protocol Handler"/>
+			<property name="mph.src.dir" value="${basedir}/../../src/" />
+			<!-- Java source and lib related Porperties -->
+			<property name="app.src.dir.MphTestApp" value="${basedir}/../src/" />
+			<property name="CLASSPATH" value="${basedir}/lib/" />
+			
+		</target>
+
+	
+	
+	
+	
+
+
+	<!-- SAS Centrex Application -->
+
+	<target name="MphTestApp" depends="init">
+
+		<!-- Create the directories for building -->
+
+		<delete dir="${dir.build}/MphTestApp" />
+		<delete file="${dir.build}/MphTestApp_ain_capv2_v_2.0.sar"/>
+		<mkdir dir="${dir.build}/MphTestApp/WEB-INF/classes" />
+		
+		<!-- Copy the Deployment Descriptor files -->
+
+		<copy todir="${dir.build}/MphTestApp/WEB-INF">
+
+			<!--<fileset file="web.xml" dir="${basedir}../.." />-->
+
+			<fileset file="sas.xml" dir="${basedir}../.." />
+
+			<fileset file="sip.xml" dir="${basedir}../.." />
+
+		</copy>
+		
+
+		<!-- Copy libraries -->
+
+		<!--<copy todir="${dir.build}/MphTestApp/WEB-INF/lib">
+		
+			<fileset file="log4j-1.2.16.jar" dir="${LIB_JARS}" />
+		</copy>-->
+
+
+
+		<!-- Compile the Source Code -->
+
+		<javac destdir="${dir.build}/MphTestApp/WEB-INF/classes" debug="true">
+			 <src path="${mph.src.dir}" />
+			<src path="${app.src.dir.MphTestApp}" />
+			
+			<include name="**/*.java" />
+			<include name="**/*.xml" />
+			
+			<classpath refid="classpath" />
+
+		</javac>
+		
+
+				
+		<!-- Deleting tmp directory -->
+		
+		<delete dir="${dir.build}/MphTestApp/tmp" />
+		
+		<!-- Package the application into a .war file -->
+
+		<jar jarfile="${dir.build}/${app.name.MphTestApp}_ain_capv2_v_2.0.sar" basedir="${dir.build}/MphTestApp" />
+
+		<!--<delete dir="${app.build.dir}/WEB-INF"/> -->
+
+	</target>
+
+	<!-- Create the API documentation -->
+
+		<target name="javadocs" depends="init">
+		   <mkdir dir="${dir.javadocs.mph}"/>
+		   <mkdir dir="${dir.javadocs.service}"/>
+		   <javadoc packagenames="${mph.packages}"
+		            sourcepath="${mph.src.dir}"
+		            destdir="${dir.javadocs.mph}"
+		            author="true"
+		            version="true"
+		            use="true"
+		            windowtitle="${ph.name} API"
+		            doctitle="&lt;h1&gt;${ph.name}&lt;/h1&gt;">
+		   				<classpath refid="classpath" />
+		   				</javadoc>
+			
+			<javadoc packagenames="${service.packages}"
+					            sourcepath="${app.src.dir.MphTestApp}"
+					            destdir="${dir.javadocs.service}"
+					            author="true"
+					            version="true"
+					            use="true"
+					            windowtitle="${service.name} API"
+					            doctitle="&lt;h1&gt;${service.name}&lt;/h1&gt;"
+					   >
+				<classpath refid="classpath" />
+				</javadoc>
+
+		</target>
+
+</project>
+

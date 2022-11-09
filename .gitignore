@@ -1,0 +1,4 @@
+testapp/build/${INSTALLROOT}/
+out/
+.idea/workspace.xml
+.gradle

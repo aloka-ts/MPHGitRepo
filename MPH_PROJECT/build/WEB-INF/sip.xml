@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sip-app PUBLIC "-//Java Community Process//DTD SIP Application 1.0//EN" "http://www.jcp.org/dtd/sip-app_1_0.dtd">
+<sip-app>
+<!-- 	<display-name>MphTestApp</display-name> -->
+	<distributable />
+	
+		<!-- The following sections list all the servlets in this application.
+	 -->
+	<servlet>
+		<servlet-name>mphTestAppSipServlet</servlet-name>
+		<servlet-class>com.agnity.service.mphTestApp.MphTestAppSipServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	
+		<!-- The following section defines the Triggering Rules for this
+		application.
+	 -->
+	<servlet-mapping>
+		<servlet-name>mphTestAppSipServlet</servlet-name>
+		<pattern>
+			<equal>
+				<var>request.method</var>
+				<value>INVITE</value>
+			</equal>
+		</pattern>
+	</servlet-mapping>
+
+	
+	<!-- 	The following section specifies the application session timeout value.-->
+
+	<session-config>
+		<session-timeout>10</session-timeout>
+	</session-config>
+
+</sip-app>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sas-app>
+    <name>testapp</name>
+    <version>1.0.0.0</version>
+    <priority>1</priority>
+    <sbb />
+    <enable-annotation>false</enable-annotation>
+    <enable-lib-annotation>true</enable-lib-annotation>
+    <!--   Listener for timertask -->
+    <listener>
+        <listener-class>com.agnity.service.mphTestApp.MphTestAppSipServlet</listener-class>
+    </listener>
+    
+    <message-handler>
+        <handler-name>MphTestAppSipServlet</handler-name>
+        <handler-class>com.agnity.service.mphTestApp.MphTestAppSipServlet</handler-class>
+    </message-handler>
+	<message-handler-mapping>
+        <handler-name>MphTestAppSipServlet</handler-name>
+        <resource-name>ro-ra</resource-name>
+    </message-handler-mapping>
+   
+	<resource-factory-mapping>
+        <factory-name>RoFactory</factory-name>
+        <resource-name>ro-ra</resource-name>
+    </resource-factory-mapping>
+    
+    <replication-config>
+        <replication-policy>
+            <event>TIMER_CREATION</event>
+            <replication-type>REPLICATE</replication-type>
+        </replication-policy>
+        <replication-policy>
+            <event>TIMER_EXPIRY</event>
+            <replication-type>REPLICATE</replication-type>
+        </replication-policy>
+    </replication-config>
+</sas-app>

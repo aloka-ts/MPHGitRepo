@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="source"/>
+<<<<<<< HEAD
+=======
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="D:/CAS_Project/CAS_10.0/CAS_NGIN/ASESubsystem/otherjars/jersey-json-1.18.1.jar"/>
+	<classpathentry kind="lib" path="D:/CAS_Project/CAS_10.0/CAS_NGIN/ASESubsystem/otherjars/json-20160212.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/commons-fileupload-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/commons-lang3-3.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/commons-pool2-2.4.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/guava-19.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/json-20160212.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/mail.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/sipservlet-1_1-api.jar"/>
+>>>>>>> MPH10.1_DEV
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/bpjars/ain-codecs-0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/bpjars/alc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/bpjars/ase.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/bpjars/bpari.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/bpjars/BpIdl1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/bpjars/bpresource.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/bpjars/bpspi.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/bpjars/capv2codecs.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/bpjars/componentMonitor.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/bpjars/fee.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/bpjars/inapitutcS2.codecs.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/bpjars/isup-codecs.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/bpjars/javanodeprocessor.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/bpjars/map-codecs-0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/bpjars/mphhelper.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/bpjars/sbb-if.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/bpjars/slee.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/bpjars/snar.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/bpjars/tcap-provider-api.jar"/>
+<<<<<<< HEAD
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/bpjars/xmlnodeprocessor.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/bpjars/xmlparser.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/commons-fileupload-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/commons-lang3-3.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/commons-pool2-2.4.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/dnsjava-2.0.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/guava-19.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/json-20160212.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/mail.jar"/>
+=======
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/httpjars/ase-http.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/rajars/http-if.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/rajars/http-ra.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/rajars/openblox-rf-3.2-obf.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/rajars/openblox-ro-3.2-obf.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/bpjars/ase.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/rajars/enum-if.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/dsjars/dsua.jar"/>
+>>>>>>> MPH10.1_DEV
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/marbenx.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/mjds3gppro.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/mjdsbase.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/mjdsbaseacct.jar"/>
+<<<<<<< HEAD
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/sipservlet-1_1-api.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+=======
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/dnsjava-2.0.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/rajars/smpp-if.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/Desktop/CAS/CAS-build/snar.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/Desktop/CAS/CAS-build/snakeyaml-1.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/snakeyaml-1.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/bpjars/fee.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/bpjars/javanodeprocessor.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/bpjars/mphhelper.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/bpjars/xmlnodeprocessor.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/bpjars/xmlparser.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/rajars/enum-full.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/rajars/ro-full.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/rajars/ro-if.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/rajars/ro-ra.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/rajars/smpp-full.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/jackson-core-2.9.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/jackson-dataformat-yaml-2.9.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/jackson-databind-2.9.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/jackson-annotations-2.9.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/reeta/GitLab/MPHGitRepo_nb/libs/otherjars/jackson-core-2.9.5.jar"/>
+>>>>>>> MPH10.1_DEV
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Implementation-Title: Aconyx MPH Library
+Implementation-Version: 10.1.0.23
+

@@ -1,0 +1,33 @@
+#Rules defintions
+---
+overloadLevelRules:
+-
+  applicationRule:
+    sessionCountBase: 36000
+    appId: 249
+    overloadLevel:
+    -
+       sessionCount: 40000
+       cpu: 65
+       memory: 65
+       level: 3.1
+    -
+      sessionCount: 45000
+      cpu: 67
+      memory: 67
+      level: 3.2
+-
+   applicationRule:
+     sessionCountBase: 36000
+     appId: 241
+     overloadLevel:
+       -
+        sessionCount: 40000
+        cpu: 65
+        memory: 65
+        level: 3.1
+       -
+        sessionCount: 45000
+        cpu: 67
+        memory: 67
+        level: 3.2

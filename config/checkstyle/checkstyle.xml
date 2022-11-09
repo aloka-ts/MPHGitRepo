@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ ******************************************************************************
+  ~ Copyright (c) 2016 Agnity, Inc. All rights reserved.
+  ~
+  ~ This is proprietary source code of Agnity, Inc.
+  ~
+  ~ Agnity, Inc. retains all intellectual property rights associated
+  ~ with this source code. Use is subject to license terms.
+  ~
+  ~ This source code contains trade secrets owned by Agnity, Inc.
+  ~ Confidentiality of this computer program must be maintained at
+  ~ all times, unless explicitly authorized by Agnity, Inc.
+  ~ ******************************************************************************
+  -->
+
+<!--
+    @author Ankit Singhal
+    A minimalistic checkstyle configuration file.
+-->
+
+<!DOCTYPE module PUBLIC
+        "-//Puppy Crawl//DTD Check Configuration 1.3//EN"
+        "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
+<module name="Checker">
+
+    <module name="TreeWalker">
+
+        <!-- Blocks -->
+        <module name="EmptyBlock">
+            <property name="option" value="stmt"/>
+            <property name="tokens" value="LITERAL_DO,LITERAL_ELSE,LITERAL_FINALLY,LITERAL_IF,LITERAL_FOR,LITERAL_TRY,LITERAL_WHILE,INSTANCE_INIT,STATIC_INIT"/>
+        </module>
+        <module name="EmptyBlock">
+            <property name="option" value="text"/>
+            <property name="tokens" value="LITERAL_CATCH"/>
+        </module>
+
+        <!-- Imports -->
+        <module name="RedundantImport"/>
+        <module name="UnusedImports"/>
+
+        <!-- Coding-->
+        <module name="SimplifyBooleanExpression"/>
+        <module name="SimplifyBooleanReturn"/>
+        <module name="StringLiteralEquality"/>
+        <module name="CovariantEquals"/>
+        <module name="DefaultComesLast"/>
+        <module name="EmptyStatement"/>
+        <module name="EqualsHashCode"/>
+        <module name="ExplicitInitialization"/>
+        <module name="MultipleVariableDeclarations"/>
+        <module name="NoFinalizer"/>
+
+        <!-- Braces -->
+        <module name="LeftCurly"/>
+        <module name="NeedBraces"/>
+
+
+        <!--&lt;!&ndash; Design &ndash;&gt;-->
+        <!--<module name="InterfaceIsType"/>-->
+
+    </module>
+    <!-- allows suppressing using the //CHECKSTYLE:ON //CHECKSTYLE:OFF -->
+    <module name="SuppressionCommentFilter"/>
+
+</module>

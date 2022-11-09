@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+	<!-- ==================================================== -->
+
+	<!-- Build file: CAS Centrex Application -->
+
+	<!-- ==================================================== -->
+
+<project name="${PROJECT_NAME}" default="all" basedir="." xmlns:sonar="antlib:org.sonar.ant">
+
+	<!-- ***************************************** -->
+
+	<!-- Main target -->
+
+	<target name="all" depends="build">
+
+	</target>
+
+
+	<!-- SAS Centrex Application -->
+
+	<target name="build">
+        
+		<!-- Create the directories for building -->
+		<delete dir="${basedir}/build/WEB-INF/classes/"/>
+		<delete file="${basedir}/build/MphTestApp.sar"/> 
+		
+		<mkdir dir="${basedir}/build/WEB-INF/classes" />
+		<!--<mkdir dir="${PROJECT_NAME}/WEB-INF/lib" />-->
+		<!-- Copy the Deployment Descriptor files -->
+
+		
+		<copy todir="${basedir}/build/WEB-INF/classes">
+		  <fileset dir="${basedir}/bin/" >
+		 <exclude name="**/mphdata/**"/>
+		 <exclude name="**/ph/**"/>	
+		<!--  <exclude name="**/inapitutcs2/**"/>-->
+		 <!-- <exclude name="**/org/**"/>-->
+		  </fileset>
+		  </copy>
+
+		
+		<!-- Package the application into a .sar file -->
+
+		<jar jarfile="MphTestApp.sar" basedir="${basedir}/build" />
+
+		<!--<delete dir="${app.build.dir}/WEB-INF"/> -->
+
+	</target>
+
+
+</project>
