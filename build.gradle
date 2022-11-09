@@ -10,6 +10,9 @@
  *   Confidentiality of this computer program must be maintained at
  *   all times, unless explicitly authorized by Agnity, Inc.
  *******************************************************************************/
+plugins {
+  id "org.sonarqube" version "3.2.0"
+}
 
 apply plugin: 'java'
 /***apply plugin: 'checkstyle' **/
