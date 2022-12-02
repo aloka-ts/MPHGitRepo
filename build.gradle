@@ -12,7 +12,6 @@
  *******************************************************************************/
 plugins {
     id "jacoco"
-    id "java"
     id "application"
     id "org.sonarqube" version "3.4.0.2513"
 }
