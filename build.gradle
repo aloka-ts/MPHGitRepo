@@ -114,9 +114,3 @@ def getDate() {
     def formattedDate = date.format('ddMMyy')
     return formattedDate
 }
-
-jacocoTestReport {
-    reports {
-        xml.enabled true
-    }
-}
