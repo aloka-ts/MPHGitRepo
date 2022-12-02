@@ -11,6 +11,12 @@
  *   all times, unless explicitly authorized by Agnity, Inc.
  *******************************************************************************/
 plugins {
+    id "jacoco"
+    id "java"
+    id "application"
+    id "org.sonarqube" version "3.4.0.2513"
+}
+plugins {
   id "org.sonarqube" version "3.2.0"
 }
 
@@ -110,4 +116,10 @@ def getDate() {
     def date = new Date()
     def formattedDate = date.format('ddMMyy')
     return formattedDate
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+    }
 }
