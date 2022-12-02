@@ -12,12 +12,9 @@
  *******************************************************************************/
 plugins {
     id "jacoco"
+    id "java"
     id "application"
-    id "org.sonarqube" version "3.4.0.2513"
-}
-plugins {
-  id "org.sonarqube" version "3.2.0"
-}
+    id "org.sonarqube" version "3.2.0"
 
 sonarqube {
     properties {
